@@ -1,0 +1,57 @@
+﻿@model Embarcacao
+@{ ViewData["Title"] = "Cadastre uma embarcação"; }
+
+
+
+@if (@ViewData["msg"] != null)
+{
+    <div class="alert alert-success">
+        <h5 class="text-center">@ViewData["msg"]</h5>
+    </div>
+}
+<h1 style="text-align: center">Cadastro de embarcações</h1>
+
+<form asp-action="Cadastrar" asp-controller="Embarcacao" class="mt-5">
+    <row>
+        <label asp-for="Nome" class="mt-2">Nome</label>
+        <input asp-for="Nome" class="form-control">
+    </row>
+    <row>
+        <label asp-for="MilhasNavegadas" class="mt-2">Milhas</label>
+        <input asp-for="MilhasNavegadas" class="form-control">
+    </row>
+    <row>
+        <label asp-for="Condicao" class="mt-2">Condicao</label>
+        <input asp-for="Condicao" class="form-control">
+    </row>
+    <row>
+        <label asp-for="Porte" class="mt-2">Porte</label>
+        <input asp-for="Porte" class="form-control">
+    </row>
+    <row>
+        <label asp-for="Turistico" class="mt-2">Turistico</label>
+        <input asp-for="Turistico" class="form-control checkbox" style="width: 3%;">
+    </row>
+    <row>
+        <div class="form-row formRowStyleButton">
+            <input type="submit" value="Cadastrar" class="btn btn-info mr-3 px-5" />
+            <a asp-action="Index" class="btn btn-danger px-5">Cancelar</a>
+        </div>
+    </row>
+</form>
+
+<style>
+    .checkbox:focus {
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+    }
+
+    .formRowStyleButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3vh;
+    }
+</style>
