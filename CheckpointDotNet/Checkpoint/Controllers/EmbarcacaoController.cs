@@ -9,6 +9,9 @@ namespace Checkpoint.Controllers
 {
     public class EmbarcacaoController : Controller
     {
+
+        private static IList<Embarcacao> _lista = new List<Embarcacao>();
+
         public IActionResult Index()
         {
             return View();
@@ -23,13 +26,18 @@ namespace Checkpoint.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Embarcacao embarcacao)
         {
-            string nome = embarcacao.Nome;
-            double milhas = embarcacao.MilhasNavegadas;
-            int condicao = embarcacao.Condicao;
-            int porte = embarcacao.Porte;
-            bool turistico = embarcacao.Turistico;
-            ViewData["msg"] = $"A embarcação {embarcacao.Nome} foi cadastrada!";
-            return View();
+
+            //ViewBag.embarcacao = embarcacao;
+            if (embarcacao.Nome == null)
+            {
+                TempData["Erro"] = "Erro ao registrar a embarcação, veja se os campos informados estão corretos.";
+            }
+            else
+            {
+                TempData["Sucesso"] = $"A embarcação {embarcacao.Nome} foi cadastrada!";
+                _lista.Add(embarcacao);
+            }
+            return RedirectToAction("Cadastrar");
         }
 
 
@@ -45,10 +53,10 @@ namespace Checkpoint.Controllers
             return View();
         }
 
-
+        [HttpGet]
         public IActionResult Listagem()
         {
-            return View();
+            return View(_lista);
         }
     }
 }

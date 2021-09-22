@@ -1,1 +1,38 @@
-﻿<h1>Listagem das embarcações</h1>
+﻿@model IList<Embarcacao>
+
+
+<h1 style="text-align: center">Listagem das embarcações</h1>
+
+
+<table class="table table-dark table-hover w-100 mt-5">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Milhas navegadas</th>
+            <th scope="col">Condição</th>
+            <th scope="col">Porte</th>
+            <th scope="col">Turístico</th>
+            <th scope="col" style="text-align: center">Ações</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr class="table table-primary table-striped text-black-50">
+                <th scope="row" style="vertical-align: middle;">@item.Nome</th>
+                <td style="vertical-align: middle;">@item.MilhasNavegadas</td>
+                <td style="vertical-align: middle;">@item.Condicao</td>
+                <td style="vertical-align: middle;">@item.Porte</td>
+                <td style="vertical-align: middle;">@(item.Turistico ? "Sim" : "Não")</td>
+                <td style="text-align: center">
+                    <a asp-action="Alterar" class="btn btn-light">Alterar</a>
+                    <a asp-action="Deletar" class="btn btn-dark">Deletar</a>
+                </td>
+            </tr>
+        </tbody>
+    }
+</table>
+<div class="text-center">
+    <a asp-action="Index" class="btn btn-info">Voltar para o menu principal</a>
+</div>
+

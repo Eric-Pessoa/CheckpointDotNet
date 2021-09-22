@@ -46,7 +46,7 @@ namespace Checkpoint
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Embarcacao}/{action=Index}/{id?}");
             });
         }
     }

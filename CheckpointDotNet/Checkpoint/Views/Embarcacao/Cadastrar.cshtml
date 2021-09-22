@@ -3,39 +3,47 @@
 
 
 
-@if (@ViewData["msg"] != null)
+@if (@TempData["Sucesso"] != null || @TempData["Erro"] != null)
 {
-    <div class="alert alert-success">
-        <h5 class="text-center">@ViewData["msg"]</h5>
-    </div>
+    @if (@TempData["Sucesso"] != null)
+    {
+            <div class="alert alert-success">
+                <h5 class="text-center">@TempData["Sucesso"]</h5>
+            </div>
+    } else
+    {    
+        <div class="alert alert-danger">
+            <h5 class="text-center">@TempData["Erro"]</h5>
+        </div>
+    }
 }
 <h1 style="text-align: center">Cadastro de embarcações</h1>
 
 <form asp-action="Cadastrar" asp-controller="Embarcacao" class="mt-5">
     <row>
-        <label asp-for="Nome" class="mt-2">Nome</label>
+        <label asp-for="Nome" class="mt-2"></label>
         <input asp-for="Nome" class="form-control">
     </row>
     <row>
-        <label asp-for="MilhasNavegadas" class="mt-2">Milhas</label>
+        <label asp-for="MilhasNavegadas" class="mt-2"></label>
         <input asp-for="MilhasNavegadas" class="form-control">
     </row>
     <row>
-        <label asp-for="Condicao" class="mt-2">Condicao</label>
+        <label asp-for="Condicao" class="mt-2"></label>
         <input asp-for="Condicao" class="form-control">
     </row>
     <row>
-        <label asp-for="Porte" class="mt-2">Porte</label>
+        <label asp-for="Porte" class="mt-2"></label>
         <input asp-for="Porte" class="form-control">
     </row>
     <row>
-        <label asp-for="Turistico" class="mt-2">Turistico</label>
+        <label asp-for="Turistico" class="mt-2"></label>
         <input asp-for="Turistico" class="form-control checkbox" style="width: 3%;">
     </row>
     <row>
         <div class="form-row formRowStyleButton">
             <input type="submit" value="Cadastrar" class="btn btn-info mr-3 px-5" />
-            <a asp-action="Index" class="btn btn-danger px-5">Cancelar</a>
+            <a asp-action="Index" class="btn btn-dark px-5">Voltar para o menu principal</a>
         </div>
     </row>
 </form>
