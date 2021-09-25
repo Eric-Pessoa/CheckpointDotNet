@@ -339,8 +339,6 @@ C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\o
 C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Checkpoint.RazorCoreGenerate.cache
 C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Razor\Views\Embarcacao\Cadastrar.cshtml.g.cs
 C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Razor\Views\Embarcacao\Index.cshtml.g.cs
-C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -354,5 +352,6 @@ C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\o
 C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Checkpoint.pdb
 C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Checkpoint.genruntimeconfig.cache
 C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Razor\Views\Embarcacao\Alterar.cshtml.g.cs
-C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Razor\Views\Embarcacao\Deletar.cshtml.g.cs
 C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Razor\Views\Embarcacao\Listagem.cshtml.g.cs
+C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Razor\Views\Embarcacao\_Form.cshtml.g.cs
+C:\Users\CLIENTE\Documents\GitHub\CheckpointDotNet\CheckpointDotNet\Checkpoint\obj\Debug\netcoreapp3.1\Razor\Views\Embarcacao\ListaFiltrada.cshtml.g.cs

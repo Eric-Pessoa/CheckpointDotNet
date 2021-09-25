@@ -2,19 +2,12 @@
 @{ ViewData["Title"] = "Listagem de embarcações"; }
 
 
-@if (@TempData["Sucesso"] != null)
-{
-    <Feedback Texto="@TempData["Sucesso"]" is-error="false"></Feedback>
-}
-else
-{
-    <Feedback Texto="@TempData["Erro"]" is-error="true"></Feedback>
+<Feedback Texto="@TempData["Sucesso"]" is-error="false"></Feedback>
 
-}
 <h1 style="text-align: center;" class="mb-3">Listagem das embarcações</h1>
 
-<form class="form-inline my-5 justify-content-center" asp-action="Listagem">
-    <input class="form-control mr-sm-2" type="search" name="nome" placeholder="Pesquise por nome" aria-label="Search">
+<form class="form-inline my-5 justify-content-center" asp-action="ListaFiltrada">
+    <input class="form-control mr-sm-2" type="text" placeholder="Pesquise por nome" aria-label="Search">
     <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
 </form>
 

@@ -1,1 +1,42 @@
-﻿<h1>Altere uma embarcação</h1>
+﻿@model Embarcacao
+@{ ViewData["Title"] = "Altere as informações de uma embarcação"; }
+
+
+@if (@TempData["Sucesso"] != null)
+{
+    <Feedback Texto="@TempData["Sucesso"]" is-error="false"></Feedback>
+}
+else
+{
+    <Feedback Texto="@TempData["Erro"]" is-error="true"></Feedback>
+
+}
+
+<h1 style="text-align: center">Altere uma embarcação</h1>
+
+<form asp-action="Alterar" asp-controller="Embarcacao" class="mt-5">
+    <input asp-for="Id" />
+    <partial name="_Form" />
+    <row>
+        <div class="form-row formRowStyleButton">
+            <input type="submit" value="Alterar" class="btn btn-info mr-3 px-5" />
+            <a asp-action="Listagem" class="btn btn-dark px-5">Voltar para a página de listagem</a>
+        </div>
+    </row>
+</form>
+
+<style>
+    .checkbox:focus {
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+    }
+
+    .formRowStyleButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3vh;
+    }
+</style>

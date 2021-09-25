@@ -1,0 +1,23 @@
+﻿@model Embarcacao
+
+
+<div>
+    <label asp-for="Nome" class="mt-2"></label>
+    <input asp-for="Nome" class="form-control">
+</div>
+<div>
+    <label asp-for="MilhasNavegadas" class="mt-2"></label>
+    <input asp-for="MilhasNavegadas" class="form-control">
+</div>
+<div>
+    <label asp-for="Condicao" class="mt-2"></label>
+    <select asp-for="Condicao" class="form-control" asp-items="Html.GetEnumSelectList<Condicao>()"></select>
+</div>
+<div>
+    <label asp-for="Porte" class="mt-2"></label>
+    <select asp-for="Porte" class="form-control" asp-items="Html.GetEnumSelectList<Porte>()"></select>
+</div>
+<div>
+    <label asp-for="Turistico" class="mt-2"></label>
+    <input asp-for="Turistico" class="form-control checkbox" style="width: 3%;">
+</div>
